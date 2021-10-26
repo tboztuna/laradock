@@ -9,8 +9,8 @@ server {
     # ssl_certificate /etc/nginx/ssl/default.crt;
     # ssl_certificate_key /etc/nginx/ssl/default.key;
 
-    server_name app.test;
-    root /var/www/app;
+    server_name icrapro-backend.test;
+    root /var/www/icrapro-backend/public;
     index index.php index.html index.htm;
 
     location / {
@@ -38,6 +38,6 @@ server {
         log_not_found off;
     }
 
-    error_log /var/log/nginx/app_error.log;
-    access_log /var/log/nginx/app_access.log;
+    error_log /var/log/nginx/icrapro_backend_test_error.log;
+    access_log /var/log/nginx/icrapro_backend_test_access.log;
 }

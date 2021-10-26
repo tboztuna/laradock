@@ -1141,6 +1141,14 @@ RUN set -eux; \
     php -m | grep -q 'zookeeper'; \
     fi
 
+# Firebird:
+###########################################################################
+ARG INSTALL_FIREBIRD=false
+
+RUN if [ ${INSTALL_FIREBIRD} = true ]; then \
+    apt-get -y install firebird-dev libc6 libfbclient2 php-common php${PHP_VERSION}-common ucf php${PHP_VERSION}-interbase \
+;fi
+
 ###########################################################################
 # New Relic for PHP:
 ###########################################################################

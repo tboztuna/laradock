@@ -1488,6 +1488,15 @@ RUN if [ ${INSTALL_XMLRPC} = true ]; then \
 ;fi
 
 ###########################################################################
+# Firebird:
+###########################################################################
+ARG INSTALL_FIREBIRD=false
+
+RUN if [ ${INSTALL_FIREBIRD} = true ]; then \
+    apt-get -y install firebird-dev libc6 libfbclient2 php-common php${PHP_VERSION}-common ucf php${PHP_VERSION}-interbase \
+;fi
+
+###########################################################################
 # Lnav:
 ###########################################################################
 
